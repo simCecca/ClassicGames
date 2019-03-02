@@ -1,0 +1,45 @@
+.btn-circle {
+    line-height: 1.428571429;
+    border-radius: 0.27em;
+}
+
+.box-connect-four {
+    border: 5px solid darkblue;
+    float: left;
+    font-size: 54px;
+    font-weight: bold;
+    line-height: 34px;
+    height: 64px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 64px;
+    background: transparent;
+}
+
+.box-connect-four:focus {
+    outline: none;
+}
+
+.kbd-navigation .box-connect-four:focus {
+    background: #ddd;
+}
+
+.game {
+    margin-left: 45em;
+    margin-top: 12em;
+}
+
+.body {
+    margin-top: 8em;
+}
+
+.pagetitle {
+    margin-left: 6em;
+    margin-top: -9em;
+}
+
+.btn-group-nextprevious {
+    margin-left: 13.5em;
+}

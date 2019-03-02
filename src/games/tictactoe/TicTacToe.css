@@ -1,0 +1,95 @@
+.status {
+    margin-top: 3em;
+}
+
+.board-row:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.box-tic-tac {
+    float: left;
+    font-size: 4em;
+    font-weight: bold;
+    line-height: 0.6em;
+    height: 1.2em;
+    margin-right: -0.02em;
+    margin-top: -0.02em;
+    padding: 0;
+    text-align: center;
+    width: 1.2em;
+    color: white;
+    background: transparent;
+}
+
+
+
+.kbd-navigation .box:focus {
+    background: #ddd;
+}
+
+.game-tic-tac {
+    margin-top: 10em;
+}
+
+.blackboard {
+    margin-left: -30em;
+    margin-right: 10em;
+    margin-top: -10em;
+    background: black;
+    border: 10px solid #5b3a29;
+}
+
+.tic-tac-buttons {
+    margin-top: 1.1625em;
+    margin-bottom: 3em;
+}
+
+.body-tic-tac {
+    color: white;
+    margin-left: 41em;
+    margin-top: 10.5em;
+    font-family: "Comic Sans MS";
+}
+
+.pagetitle-tic-tac {
+    margin-top: 1em;
+    margin-left: 38em;
+    color: white;
+    font-family: "Comic Sans MS";
+}
+
+.squarenumber input{
+    background: transparent;
+    color: white;
+    margin-left: 2em;
+}
+.squarenumber {
+    margin-left: -2em;
+}
+
+.personal-outline-danger {
+    color: red;
+    background: transparent;
+    border: 0.1em solid red;
+}
+
+.personal-outline-primary {
+    color: #157DEC;
+    background: transparent;
+    border: 0.1em solid #157DEC;
+}
+
+.personal-outline-danger:hover {
+    color: red;
+}
+
+.personal-outline-primary:hover {
+    color: #157DEC;
+}
+
+.box-tic-tac:focus {
+    outline: none;
+    border-style: outset;
+}
