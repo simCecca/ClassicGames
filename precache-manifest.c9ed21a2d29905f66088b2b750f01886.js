@@ -8,15 +8,15 @@ self.__precacheManifest = [
     "url": "/ClassicGames/static/js/runtime~main.0545c6ca.js"
   },
   {
-    "revision": "11f827d33dea819aeb97",
-    "url": "/ClassicGames/static/js/main.11f827d3.chunk.js"
+    "revision": "67b058e70cbfb8e4b45b",
+    "url": "/ClassicGames/static/js/main.67b058e7.chunk.js"
   },
   {
     "revision": "ce16120cb26415fe3d86",
     "url": "/ClassicGames/static/js/2.ce16120c.chunk.js"
   },
   {
-    "revision": "11f827d33dea819aeb97",
+    "revision": "67b058e70cbfb8e4b45b",
     "url": "/ClassicGames/static/css/main.6b342c7a.chunk.css"
   },
   {
@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/ClassicGames/static/css/2.8ab53b01.chunk.css"
   },
   {
-    "revision": "ed3652a0a5d21bdadb54d8b29d8463e0",
+    "revision": "a8bc5fd01c6b5fcc4fa5d53e7ebfa6fe",
     "url": "/ClassicGames/index.html"
   }
 ];
