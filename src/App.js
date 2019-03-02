@@ -4,7 +4,7 @@ import './style/App.css';
 import GameTicTacToe from './games/tictactoe/gameTicTacToe'
 import GameConnectFour from './games/connectFour/gameConnectFour'
 import PersonalNavbar from './personalNavbar'
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { HashRouter as Router, Route } from 'react-router-dom';
 import ConnectFour from './games/connectFour/ConnectFour'
 import TicTacToe from './games/tictactoe/TicTacToe'
 
