@@ -108,13 +108,11 @@ class GameConnectFour extends Component{
         return (
             <main role="main" className="container">
                 <div className="page-title-connect-four">
-                    <h1>
-                        Connect Four
-                    </h1>
+                    <p>Connect Four</p>
                 </div>
                 <div className="body-connect-four">
                     <div className="status">
-                        <div><h3>{ status }</h3></div>
+                        <div><p>{ status }</p></div>
                     </div>
                     <Board
                         name = "box-connect-four btn-circle"

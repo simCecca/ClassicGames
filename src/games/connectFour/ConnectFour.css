@@ -32,8 +32,13 @@
 
 .page-title-connect-four {
     margin-left: 37%;
+    font-size: 310%;
+}
+
+.status{
+    font-size: 200%;
 }
 
 .btn-group-nextprevious {
-    margin-left: 34%;
+    margin-left: 27%;
 }

@@ -10,15 +10,15 @@
 
 .box-tic-tac {
     float: left;
-    font-size: 4em;
+    font-size: 8vmin;
     font-weight: bold;
-    line-height: 0.6em;
-    height: 1.2em;
-    margin-right: -0.02em;
-    margin-top: -0.02em;
+    line-height: 3%;
+    height: 8.9vmin;
+    margin-right: -0.1%;
+    margin-top: -0.1%;
     padding: 0;
     text-align: center;
-    width: 1.2em;
+    width: 8.9vmin;
     color: white;
     background: transparent;
 }
