@@ -76,17 +76,24 @@ class GameTicTacToe extends Component{
 
     handleStyle(id){
         let style = {};
+        const history = this.state.history;
+        const current = history[this.state.stepNumber];
+        const winner = gameLogic.calculateWinner(current.boxes);
+        const color = "black";
         if(id % this.state.numberOfBoxes === this.state.numberOfBoxes - 1){//last column of the board
-            style.borderRight = "solid black";
+            style.borderRight = "solid " + color;
         }
         if(id <= this.state.numberOfBoxes - 1) { //first row
-            style.borderTop = "solid black";
+            style.borderTop = "solid " + color;
         }
         if(id % this.state.numberOfBoxes === 0){//first column
-            style.borderLeft = "solid black";
+            style.borderLeft = "solid " + color;
         }
         if(id >= this.state.numberOfBoxes * this.state.numberOfBoxes - this.state.numberOfBoxes){//last row
-            style.borderBottom = "solid black";
+            style.borderBottom = "solid " + color;
+        }
+        if(winner && winner[1].includes(id)){
+            style.color = "green";
         }
         return style;
     }
@@ -104,44 +111,43 @@ class GameTicTacToe extends Component{
         const status = winner ? 'The winner is ' + winner : 'Next Player is ' + (this.state.xIsNext ? 'X' : 'O');
 
         return (
-            <div className="game">
-                <div className="blackboard">
-                <div className="pagetitle-tic-tac">
-                    <h1>
-                        Tic-Tac-Toe Game
-                    </h1>
-                </div>
-                    <div className="body-tic-tac">
-                        <div className="squarenumber">
-                            <h5>Number of squares (from 3 to 6)</h5>
-                            <input type="text" autoComplete="off" name="name" onChange={ (e) => {this.handleChange(e.target.value)}} />
-                        </div>
-
-                        <div className="status">
-                            <div><h5>{ status }</h5></div>
-                        </div>
-                        <div className="game-board-tic-tac">
-                                <Board
-                                    name = "box-tic-tac"
-                                    boxes = { current.boxes }
-                                    onClick = { (i) => this.handleClick(i) }
-                                    winners = { boxWinners }
-                                    boardSize = { this.state.numberOfBoxes }
-                                    style = {(i) => this.handleStyle(i)}
-                                />
-                        </div>
-                        <div className="btn-toolbar tic-tac-buttons" role="toolbar" aria-label="Toolbar with button groups">
-                            <div className="btn-group-reset-tic-tac" role="group" aria-label="First group">
-                                <button  onClick={ () => this.reset() } className="btn personal-outline-danger mr-1" >Reset</button>
+            <main role="main" className="container">
+                    <div className="blackboard">
+                    <div className="pagetitle-tic-tac">
+                        <h1>
+                            Tic-Tac-Toe Game
+                        </h1>
+                    </div>
+                        <div className="body-tic-tac">
+                            <div className="square-number">
+                                <h5>Number of squares (from 3 to 6)</h5>
+                                <input type="text" autoComplete="off" name="name" onChange={ (e) => {this.handleChange(e.target.value)}} />
                             </div>
-                            <div className="btn-group-nextprevious-tic-tac" role="group" aria-label="Second group">
-                                <button  onClick={ () => this.handleHistory(-1) } className="btn personal-outline-primary">Precedence</button>
-                                <button  onClick={ () => this.handleHistory(1) } className="btn personal-outline-primary">Next</button>
+
+                            <div className="status">
+                                <div><h5>{ status }</h5></div>
+                            </div>
+                            <div className="game-board-tic-tac">
+                                    <Board
+                                        name = "box-tic-tac"
+                                        boxes = { current.boxes }
+                                        onClick = { (i) => this.handleClick(i) }
+                                        boardSize = { this.state.numberOfBoxes }
+                                        style = { (i) => this.handleStyle(i) }
+                                    />
+                            </div>
+                            <div className="btn-toolbar tic-tac-buttons" role="toolbar" aria-label="Toolbar with button groups">
+                                <div className="btn-group-reset-tic-tac" role="group" aria-label="First group">
+                                    <button  onClick={ () => this.reset() } className="btn personal-outline-danger mr-1" >Reset</button>
+                                </div>
+                                <div className="btn-group-nextprevious-tic-tac" role="group" aria-label="Second group">
+                                    <button  onClick={ () => this.handleHistory(-1) } className="btn personal-outline-primary">Precedence</button>
+                                    <button  onClick={ () => this.handleHistory(1) } className="btn personal-outline-primary">Next</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+            </main>
         );
     }
 }

@@ -46,7 +46,7 @@ class GameConnectFour extends Component{
             return;
         }
         if(freePosition != null){
-            boxes[freePosition] = this.state.isXNext ? 'X' : 'O';
+            boxes[freePosition] = this.state.isXNext ? '#d70000' : '#CCCC00';
             colors[freePosition] = this.state.isXNext ? '#d70000' : '#CCCC00';
             this.setState({
                 history: history.concat([{
@@ -81,6 +81,17 @@ class GameConnectFour extends Component{
         }
     }
 
+    handleStyle(id){
+        const history = this.state.history;
+        const current = history[this.state.stepNumber];
+        const winner = gameLogic.calculateWinner(current.boxes);
+        let style = {background: current.colors[id]};
+        if(winner && winner[1].includes(id))
+            style.border = "0.1em solid green";
+        return style;
+
+    }
+
     render(){
 
         let boxWinners = [-1,-1];
@@ -90,28 +101,28 @@ class GameConnectFour extends Component{
         const winner = gameLogic.calculateWinner(current.boxes);
         let type;
         if(winner){
-            type = winner[0];
+            type = winner[0] === '#d70000' ? 'Red' : 'Yellow';
             boxWinners = winner[1];
         }
-        const status = winner ? 'The winner is ' + type : 'Next Player is ' + (this.state.isXNext ? 'X' : 'O');
+        const status = winner ? 'The winner is ' + type : 'Next Player is ' + (this.state.isXNext ? 'Red' : 'Yellow');
         return (
-            <div className="game">
-                <div className="pagetitle">
+            <main role="main" className="container">
+                <div className="page-title-connect-four">
                     <h1>
                         Connect Four
                     </h1>
                 </div>
-                <div className="body">
+                <div className="body-connect-four">
                     <div className="status">
                         <div><h3>{ status }</h3></div>
                     </div>
                     <Board
                         name = "box-connect-four btn-circle"
-                        colors = { current.colors }
                         boardSize = { this.state.boardSize }
-                        boxes = { current.boxes }
+                        boxes = { "" }
                         onClick = { (i) => this.handleClick(i) }
-                        winners = { boxWinners }/>
+                        style = { (i) => this.handleStyle(i)}
+                    />
                     <div className="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
                         <div className="btn-group-reset" role="group" aria-label="First group">
                             <button  onClick={ () => this.reset() } className="btn btn-danger">Reset</button>
@@ -122,7 +133,7 @@ class GameConnectFour extends Component{
                         </div>
                     </div>
                 </div>
-            </div>
+            </main>
         );
     }
 }

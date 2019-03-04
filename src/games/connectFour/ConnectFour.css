@@ -1,21 +1,21 @@
 .btn-circle {
-    line-height: 1.428571429;
-    border-radius: 0.27em;
+    border-radius: 25%;
 }
 
 .box-connect-four {
-    border: 5px solid darkblue;
+    border: 0.1em solid darkblue;
     float: left;
-    font-size: 54px;
+    font-size: 7vmin;
     font-weight: bold;
-    line-height: 34px;
-    height: 64px;
-    margin-right: -1px;
-    margin-top: -1px;
+    line-height: 3%;
+    height: 9vmin;
+    margin-right: -0.1%;
+    margin-top: -0.1%;
     padding: 0;
     text-align: center;
-    width: 64px;
+    width: 8.9vmin;
     background: transparent;
+
 }
 
 .box-connect-four:focus {
@@ -26,20 +26,14 @@
     background: #ddd;
 }
 
-.game {
-    margin-left: 45em;
-    margin-top: 12em;
+.body-connect-four {
+    margin-left: 30%;
 }
 
-.body {
-    margin-top: 5em;
-}
-
-.pagetitle {
-    margin-left: 6em;
-    margin-top: -9em;
+.page-title-connect-four {
+    margin-left: 37%;
 }
 
 .btn-group-nextprevious {
-    margin-left: 13.5em;
+    margin-left: 34%;
 }
