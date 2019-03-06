@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Board from '../commonComponents/board'
 import './TicTacToe.css'
 import { Jumbotron, Container, Row, Col } from 'react-bootstrap'
-const gameLogic = require('./gameLogic');
+const gameLogic = require('../commonComponents/connectNLogic');
 
 
 
@@ -24,7 +24,7 @@ class GameTicTacToe extends Component{
         const history = this.state.history.slice(0, this.state.stepNumber + 1);
         const current = history[history.length - 1];
         const boxes = current.boxes.slice();
-        if(gameLogic.calculateWinner(boxes) || boxes[i]) {
+        if(gameLogic.calculateWinner(boxes, this.state.numberOfBoxes, this.state.numberOfBoxes > 4 ? 4 : 3) || boxes[i]) {
             return;
         }
         boxes[i] = this.state.xIsNext ? 'X' : 'O';
@@ -78,7 +78,7 @@ class GameTicTacToe extends Component{
         let style = {};
         const history = this.state.history;
         const current = history[this.state.stepNumber];
-        const winner = gameLogic.calculateWinner(current.boxes);
+        const winner = gameLogic.calculateWinner(current.boxes, this.state.numberOfBoxes, this.state.numberOfBoxes > 4 ? 4 : 3);
         const color = "black";
         if(id % this.state.numberOfBoxes === this.state.numberOfBoxes - 1){//last column of the board
             style.borderRight = "solid " + color;
@@ -103,7 +103,7 @@ class GameTicTacToe extends Component{
         const current = history[this.state.stepNumber];
 
         let boxWinners = [-1,-1];
-        let winner = gameLogic.calculateWinner(current.boxes);
+        let winner = gameLogic.calculateWinner(current.boxes, this.state.numberOfBoxes, this.state.numberOfBoxes > 4 ? 4 : 3);
         if(winner) {
             boxWinners = winner[1];
             winner = winner[0];

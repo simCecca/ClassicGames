@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Board from '../commonComponents/board'
 import './ConnectFour.css'
-const gameLogic = require('./connectFourLogic');
+const gameLogic = require('../commonComponents/connectNLogic');
 
 
 class GameConnectFour extends Component{
@@ -42,7 +42,7 @@ class GameConnectFour extends Component{
         const colors = current.colors.slice();
         const column = i % this.state.boardSize;
         const freePosition = this._findFreePosition(column, boxes);
-        if(gameLogic.calculateWinner(boxes)){
+        if(gameLogic.calculateWinner(boxes, 7, 4)){
             return;
         }
         if(freePosition != null){
@@ -84,7 +84,7 @@ class GameConnectFour extends Component{
     handleStyle(id){
         const history = this.state.history;
         const current = history[this.state.stepNumber];
-        const winner = gameLogic.calculateWinner(current.boxes);
+        const winner = gameLogic.calculateWinner(current.boxes, 7, 4);
         let style = {background: current.colors[id]};
         if(winner && winner[1].includes(id))
             style.border = "0.1em solid green";
@@ -98,7 +98,7 @@ class GameConnectFour extends Component{
 
         const history = this.state.history;
         const current = history[this.state.stepNumber];
-        const winner = gameLogic.calculateWinner(current.boxes);
+        const winner = gameLogic.calculateWinner(current.boxes, 7, 4);
         let type;
         if(winner){
             type = winner[0] === '#d70000' ? 'Red' : 'Yellow';
@@ -107,6 +107,8 @@ class GameConnectFour extends Component{
         const status = winner ? 'The winner is ' + type : 'Next Player is ' + (this.state.isXNext ? 'Red' : 'Yellow');
         return (
             <main role="main" className="container">
+
+
                 <div className="page-title-connect-four">
                     <p>Connect Four</p>
                 </div>
