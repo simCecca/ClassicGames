@@ -14,6 +14,9 @@ class PersonalNavbar extends Component {
                                 <Nav.Link eventKey="link-1" href="/ClassicGames/#/ConnectFour"><h5>Connect Four</h5></Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
+                                <Nav.Link eventKey="link-2" href="/ClassicGames/#/Snake"><h5>Snake</h5></Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item>
                                 <Nav.Link eventKey="link-2" href="/ClassicGames/#/TicTacToe"><h5>Tic-Tac-Toe</h5></Nav.Link>
                             </Nav.Item>
                     </Nav>

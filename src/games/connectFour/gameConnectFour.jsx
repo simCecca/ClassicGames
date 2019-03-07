@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Board from '../commonComponents/board'
 import './ConnectFour.css'
-const gameLogic = require('../commonComponents/connectNLogic');
+const gameLogic = require('../gameLogics/connectNLogic');
 
 
 class GameConnectFour extends Component{
@@ -117,9 +117,9 @@ class GameConnectFour extends Component{
                         <div><p>{ status }</p></div>
                     </div>
                     <Board
-                        name = "box-connect-four btn-circle"
+                        name = { () => "box-connect-four btn-circle" }
                         boardSize = { this.state.boardSize }
-                        boxes = { "" }
+                        getValue = { () => "" }
                         onClick = { (i) => this.handleClick(i) }
                         style = { (i) => this.handleStyle(i)}
                     />

@@ -4,7 +4,7 @@ import Box from './box'
 class Board extends Component{
 
     renderBox(i){
-        return <Box index = { i } name = { this.props.name } style = { this.props.style } value = { this.props.boxes[i] } onClick={() => this.props.onClick(i)} style = { this.props.style } />;
+        return <Box index = { i } name = { this.props.name } style = { this.props.style } value = { this.props.getValue(i) } onClick={() => this.props.onClick(i)} style = { this.props.style } />;
     }
 
     renderBoard(numberOfBoxes){
@@ -22,6 +22,8 @@ class Board extends Component{
         }
         return board;
     }
+
+
 
     render(){
         return (

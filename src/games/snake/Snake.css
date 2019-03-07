@@ -1,0 +1,74 @@
+.body-snake {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-snake {
+    border: 0em;
+    float: left;
+    font-size: 7vmin;
+    font-weight: bold;
+    line-height: 3%;
+    height: 8vmin;
+    padding: 0;
+    text-align: center;
+    width: 8vmin;
+    background: transparent;
+}
+
+.apple {
+    background: red;
+    border-radius: 100%;
+    border-color: black;
+}
+
+.tail {
+    background: green;
+}
+
+.head-right {
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
+    background: darkgreen;
+}
+
+.head-bottom {
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    background: darkgreen;
+}
+
+.head-top {
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    background: darkgreen;
+}
+
+.head-left {
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 100%;
+    background: darkgreen;
+}
+
+.body-board {
+    margin-top: 1%;
+    border: 0.2em solid black;
+    background: saddlebrown;
+}
+
+.ground-light {
+    background: sandybrown;
+}
+
+.ground-dark {
+    background: saddlebrown;
+}
+
+.end-of-tail {
+
+}
+
+.score-snake{
+    margin-right: 2%;
+}

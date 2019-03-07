@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Board from '../commonComponents/board'
 import './TicTacToe.css'
 import { Jumbotron, Container, Row, Col } from 'react-bootstrap'
-const gameLogic = require('../commonComponents/connectNLogic');
+const gameLogic = require('../gameLogics/connectNLogic');
 
 
 
@@ -59,7 +59,7 @@ class GameTicTacToe extends Component{
             }],
             stepNumber: 0,
             xIsNext: true,
-            numberOfBoxes: 3,
+            numberOfBoxes: this.state.numberOfBoxes,
         });
     }
 
@@ -129,8 +129,8 @@ class GameTicTacToe extends Component{
                             </div>
                             <div className="game-board-tic-tac">
                                     <Board
-                                        name = "box-tic-tac"
-                                        boxes = { current.boxes }
+                                        name = { () => "box-tic-tac" }
+                                        getValue = { (id) => current.boxes[id] }
                                         onClick = { (i) => this.handleClick(i) }
                                         boardSize = { this.state.numberOfBoxes }
                                         style = { (i) => this.handleStyle(i) }

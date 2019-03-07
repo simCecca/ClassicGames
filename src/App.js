@@ -6,6 +6,7 @@ import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import ClassicGames from './games/home/ClassicGames'
 import ConnectFour from './games/connectFour/ConnectFour'
 import TicTacToe from './games/tictactoe/TicTacToe'
+import Snake from './games/snake/snake'
 
 
 class App extends Component {
@@ -18,6 +19,7 @@ class App extends Component {
                 <Switch>
                     <Route exact path='/' component={ClassicGames}/>
                     <Route path="/ConnectFour" component={ConnectFour}/>
+                    <Route path = "/Snake" component={Snake}/>
                     <Route path="/TicTacToe" component={TicTacToe}/>
                 </Switch>
             </div>
