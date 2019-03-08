@@ -5,7 +5,8 @@ class PersonalNavbar extends Component {
     render() {
         return (
             <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
-                <Navbar.Brand href="/ClassicGames/#/">Classic Games</Navbar.Brand>
+                <img className="mr-2" src="http://simonececcarelli.altervista.org/ClassicGamesImages/icon.png"/>
+                <Navbar.Brand href="/ClassicGames/#/"> Classic Games</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto"/>

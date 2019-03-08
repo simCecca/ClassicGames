@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="dda5456f-6fcc-4210-a9c5-534928778fa3" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/snake.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/images/snake.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/games/snake/Snake.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/snake/Snake.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/games/snake/snake.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/snake/snake.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/ticTacToe.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/images/ticTacToe.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/games/home/personalNavbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/home/personalNavbar.jsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,20 +22,11 @@
       <file leaf-file-name="snake.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/games/snake/snake.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
+            <state relative-caret-position="665">
               <caret line="178" column="154" selection-start-line="178" selection-start-column="154" selection-end-line="178" selection-end-column="154" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SnakeLogic.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/games/gameLogics/SnakeLogic.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -61,8 +52,8 @@
       <file leaf-file-name="personalNavbar.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/games/home/personalNavbar.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="98" selection-start-line="16" selection-start-column="98" selection-end-line="16" selection-end-column="98" />
+            <state relative-caret-position="119">
+              <caret line="7" column="109" selection-start-line="7" selection-start-column="109" selection-end-line="7" selection-end-column="109" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -91,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="4" selection-start-line="4" selection-end-line="5" />
+              <caret line="4" column="102" selection-start-line="4" selection-start-column="102" selection-end-line="4" selection-end-column="102" />
             </state>
           </provider>
         </entry>
@@ -112,7 +103,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Snake.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Snake.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/games/snake/Snake.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="220">
@@ -204,7 +195,6 @@
         <option value="$PROJECT_DIR$/src/games/connectFour/ConnectFour.css" />
         <option value="$PROJECT_DIR$/src/games/home/ClassicGames.css" />
         <option value="$PROJECT_DIR$/src/games/connectFour/connectFourLogic.js" />
-        <option value="$PROJECT_DIR$/src/games/home/personalNavbar.jsx" />
         <option value="$PROJECT_DIR$/src/games/snake/Snake.js" />
         <option value="$PROJECT_DIR$/src/games/snake/Snake.jsx" />
         <option value="$PROJECT_DIR$/src/App.js" />
@@ -217,9 +207,10 @@
         <option value="$PROJECT_DIR$/src/games/tictactoe/gameTicTacToe.jsx" />
         <option value="$PROJECT_DIR$/src/games/connectFour/gameConnectFour.jsx" />
         <option value="$PROJECT_DIR$/src/games/home/ClassicGames.js" />
-        <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/games/snake/snake.jsx" />
         <option value="$PROJECT_DIR$/src/games/snake/Snake.css" />
+        <option value="$PROJECT_DIR$/src/games/home/personalNavbar.jsx" />
+        <option value="$PROJECT_DIR$/public/index.html" />
       </list>
     </option>
   </component>
@@ -234,7 +225,7 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="1030" />
     <option name="y" value="-15" />
     <option name="width" value="980" />
@@ -337,6 +328,9 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Cecio\WebstormProjects\ClassicGames\src\games\home" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Cecio\WebstormProjects\ClassicGames\src\games\gameLogics" />
       <recent name="C:\Users\Cecio\WebstormProjects\ClassicGames\src\games\commonComponents" />
@@ -380,18 +374,18 @@
       <workItem from="1551774642020" duration="623000" />
       <workItem from="1551806797898" duration="71000" />
       <workItem from="1551874513485" duration="47776000" />
-      <workItem from="1552032168480" duration="16610000" />
+      <workItem from="1552032168480" duration="19218000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="276508000" />
+    <option name="totallyTimeSpent" value="279116000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14937212" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14937212" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
@@ -399,7 +393,7 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.32909605" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32909605" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32909605" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -418,13 +412,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/games/connectFour/ConnectFour.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="10" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/games/connectFour/gameConnectFour.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1802">
@@ -714,20 +701,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/games/home/personalNavbar.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="98" selection-start-line="16" selection-start-column="98" selection-end-line="16" selection-end-column="98" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/games/snake/Snake.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="90" column="31" selection-start-line="90" selection-start-column="31" selection-end-line="90" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -741,16 +725,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
+    <entry file="file://$PROJECT_DIR$/public/icon.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/games/home/personalNavbar.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="5" />
+        <state relative-caret-position="119">
+          <caret line="7" column="109" selection-start-line="7" selection-start-column="109" selection-end-line="7" selection-end-column="109" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/games/snake/snake.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
+        <state relative-caret-position="665">
           <caret line="178" column="154" selection-start-line="178" selection-start-column="154" selection-end-line="178" selection-end-column="154" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
@@ -758,10 +748,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/games/snake/Snake.css">
+    <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="90" column="31" selection-start-line="90" selection-start-column="31" selection-end-line="90" selection-end-column="31" />
+        <state relative-caret-position="68">
+          <caret line="4" column="102" selection-start-line="4" selection-start-column="102" selection-end-line="4" selection-end-column="102" />
         </state>
       </provider>
     </entry>
