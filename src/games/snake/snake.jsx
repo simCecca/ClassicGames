@@ -176,7 +176,7 @@ class Snake extends Component {
                                 <div className="col-1">
                                     <div className="btn-group" role="group" aria-label="Second group">
                                         <button  onClick={ () => this.reset() } className="btn btn-danger mr-2">Reset</button>
-                                        <button  onClick={ () => this.pause() } className="btn btn-warning">pause</button>
+                                        <button  onClick={ () => this.pause() } className="btn btn-warning">{(this.state.isGamePaused) ? "play" : "pause"}</button>
                                     </div>
                                 </div>
                             </div>

@@ -62,25 +62,39 @@
     border-top-right-radius: 100%;
     border-bottom-right-radius: 100%;
     background: black;
-    border-right-style: outset;
+    border-top: 1vmin solid red;
+    border-bottom: 1vmin solid red;
+    border-right: 0vmin solid red;
 }
 
 .head-bottom {
+    border:  0.3em solid black;
     border-bottom-left-radius: 100%;
     border-bottom-right-radius: 100%;
     background: black;
+    border-left: 1vmin solid red;
+    border-right: 1vmin solid red;
+    border-bottom: 0vmin solid red;
 }
 
 .head-top {
+    border:  0.3em solid black;
     border-top-left-radius: 100%;
     border-top-right-radius: 100%;
     background: black;
+    border-left: 1vmin solid red;
+    border-right: 1vmin solid red;
+    border-top: 0vmin solid red;
 }
 
 .head-left {
+    border:  0.3em solid black;
     border-top-left-radius: 100%;
     border-bottom-left-radius: 100%;
     background: black;
+    border-top: 1vmin solid red;
+    border-bottom: 1vmin solid red;
+    border-left: 0vmin solid red;
 }
 
 .ground-light {
@@ -92,13 +106,12 @@
 }
 
 .page-title-snake {
-
-    font-size: 350%;
+    font-size: 9vmin;
 }
 
 .snake-score {
     margin-left: 5%;
-    font-size: 70%;
+    font-size: 6vmin;
 }
 
 .title-text {
