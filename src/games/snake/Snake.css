@@ -3,13 +3,16 @@
     justify-content: center;
     align-items: center;
 }
+.body-board {
+    border: 0.2em solid black;
+    background: brown;
+}
 
 .box-snake {
     border: 0em;
     float: left;
     font-size: 7vmin;
     font-weight: bold;
-    line-height: 3%;
     height: 8vmin;
     padding: 0;
     text-align: center;
@@ -17,44 +20,67 @@
     background: transparent;
 }
 
+.box-snake:focus {
+    outline: none;
+}
+
 .apple {
     background: red;
-    border-radius: 100%;
-    border-color: black;
+    background-clip: content-box ;
+    padding: 0%;
+    border-radius: 50%;
+    border: 0.1em solid rgba(255,0,0,0.4);
+}
+
+.end-of-tail-right {
+    border-top: 4vmin solid transparent;
+    border-bottom: 4vmin solid transparent;
+    border-right: 8vmin solid black;
+}
+.end-of-tail-left {
+    border-top: 4vmin solid transparent;
+    border-bottom: 4vmin solid transparent;
+    border-left: 8vmin solid black;
+}
+.end-of-tail-top {
+    border-right: 4vmin solid transparent;
+    border-left: 4vmin solid transparent;
+    border-top: 8vmin solid black;
+}
+.end-of-tail-bottom {
+    border-left: 4vmin solid transparent;
+    border-right: 4vmin solid transparent;
+    border-bottom: 8vmin solid black;
 }
 
 .tail {
-    background: green;
+    background: darkgreen;
 }
 
 .head-right {
+    border:  0.3em solid black;
     border-top-right-radius: 100%;
     border-bottom-right-radius: 100%;
-    background: darkgreen;
+    background: black;
+    border-right-style: outset;
 }
 
 .head-bottom {
     border-bottom-left-radius: 100%;
     border-bottom-right-radius: 100%;
-    background: darkgreen;
+    background: black;
 }
 
 .head-top {
     border-top-left-radius: 100%;
     border-top-right-radius: 100%;
-    background: darkgreen;
+    background: black;
 }
 
 .head-left {
     border-top-left-radius: 100%;
     border-bottom-left-radius: 100%;
-    background: darkgreen;
-}
-
-.body-board {
-    margin-top: 1%;
-    border: 0.2em solid black;
-    background: saddlebrown;
+    background: black;
 }
 
 .ground-light {
@@ -65,10 +91,20 @@
     background: saddlebrown;
 }
 
-.end-of-tail {
+.page-title-snake {
 
+    font-size: 350%;
 }
 
-.score-snake{
-    margin-right: 2%;
+.snake-score {
+    margin-left: 5%;
+    font-size: 70%;
+}
+
+.title-text {
+    margin-left: 25%;
+}
+
+.game-over-snake {
+    color:red;
 }

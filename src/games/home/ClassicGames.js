@@ -10,7 +10,7 @@ class ClassicGames extends Component {
                     <div className="container home-container">
                         <div className="row first-home-row">
                             <GameColumn name = "Connect Four" link = "/ClassicGames/#/ConnectFour" linkImage = "http://simonececcarelli.altervista.org/ClassicGamesImages/connectFour.PNG" description = "This is an implementation of the game Connect Four. The objective of the game is to be the first to form a horizontal, vertical, or diagonal line of four of one's own discs"/>
-                            <GameColumn name = "Snake - Under Construction" link = "/ClassicGames/#/Snake" description = "This is an implementation of the Snake game"/>
+                            <GameColumn name = "Snake" link = "/ClassicGames/#/Snake" linkImage = "http://simonececcarelli.altervista.org/ClassicGamesImages/snake.PNG" description = "This is an implementation of the Snake game"/>
                             <GameColumn name = "Tic-Tac-Toe" link = "/ClassicGames/#/TicTacToe" linkImage = "http://simonececcarelli.altervista.org/ClassicGamesImages/ticTacToe.PNG" description = "This is an implementation of the Tic-Tac-Toe game, in which, you can choose the number of rows/columns "/>
                         </div>
                     </div>

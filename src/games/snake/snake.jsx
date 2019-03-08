@@ -22,6 +22,7 @@ class Snake extends Component {
             boardSize: boardSize,
             score: 0,
             amIDied: false,
+            isGamePaused: false,
         };
     }
 
@@ -48,7 +49,7 @@ class Snake extends Component {
     }
 
     gameLoop() {
-        if(!this.state.amIDied) {//understund if I am in the same position of the apple
+        if(!this.state.amIDied && !this.state.isGamePaused) {//understund if I am in the same position of the apple
             const state = {
                 score: this.state.score,
                 applePosition: this.state.applePosition,
@@ -95,38 +96,94 @@ class Snake extends Component {
 
     getName(id){
         const coordinates = Utilities.matrixToArrayConverter(id, this.state.boardSize);
-        let name = ((coordinates.x + coordinates.y) % 2 === 0) ? "ground-light " : "ground-dark ";
+        let name = "";
+        name += ((coordinates.row + coordinates.column) % 2 === 0) ? " ground-light " : " ground-dark ";
         if(coordinates.row === this.state.applePosition.row && coordinates.column === this.state.applePosition.column)
             name = "apple";
-        this.state.snakeTail.forEach((tailPiece, index) => {
-            if(tailPiece.row === coordinates.row && tailPiece.column === coordinates.column)
-                name = "tail";
-            if(index === this.state.snakeTail.length-1)
-                name += " end-of-tail";
+        this.state.snakeTail.forEach((tailPiece, index, tail) => {
+            if(tailPiece.row === coordinates.row && tailPiece.column === coordinates.column) {
+                if (index === this.state.snakeTail.length - 1) {
+                    name += " end-of-tail-";
+                    let inFrontOf;
+                    if(index > 0)
+                        inFrontOf = tail[index-1];
+                    else inFrontOf = this.state.snakePosition;
+                    name += (inFrontOf.column > tailPiece.column) ? "right" : (inFrontOf.column < tailPiece.column) ? "left" : (inFrontOf.row > tailPiece.row) ? "bottom" : "top";
+                }
+                else name = "tail";
+            }
         });
         if(coordinates.row === this.state.snakePosition.row && coordinates.column === this.state.snakePosition.column) {
             name = "head-";
             name += (this.state.snakeDirection.x > 0) ? "right" : (this.state.snakeDirection.x < 0) ? "left" : (this.state.snakeDirection.y < 0) ? "top" : "bottom";
         }
+
         return name;
+    }
+
+    reset() {
+        if(this.state.amIDied) {
+            const boardSize = 10;
+            this.snakeLogic = new SnakeLogic(boardSize);
+            this.scoreForEachApple = 20;
+            const boxes = Utilities.createEmptyMatrix(boardSize);
+            this.setState({
+                boxes: boxes,
+                snakePosition: {row: 0, column: 0},
+                snakeDirection: {x: 1, y: 0},
+                snakeTail: [],
+                applePosition: this.snakeLogic.newApplePosition(),//{row: random, column: random}
+                boardSize: boardSize,
+                score: 0,
+                amIDied: false,
+                isGamePaused: false,
+            });
+            setTimeout(() => {
+                this.gameLoop()
+            }, this.state.snakeTail.length ? (200 / this.state.snakeTail.length) + 100 : 400);
+        }
+    }
+
+    pause(){
+        if(this.state.isGamePaused){
+            this.setState({isGamePaused: false});
+            setTimeout(() => {
+                this.gameLoop()
+            }, this.state.snakeTail.length ? (200 / this.state.snakeTail.length) + 100 : 400);
+        }
+        else this.setState({isGamePaused: true});
     }
 
     render() {
         return (
-            <div className= "body-snake">
-                <div className="score-snake">
-                    <h4>{this.state.score}</h4>
+            <main role="main" className="container">
+                <div className="row">
+                    <div className= "body-snake col">
+                        <div className="body-board">
+                            <Board
+                                name = { (i) => "box-snake " + this.getName(i) }
+                                boardSize = { this.state.boardSize }
+                                getValue = { (i) => this.getBoxValue(i) }
+                                onClick = { (i) => null }
+                                style = { (i) => null}
+                            />
+                        </div>
+                        <div className="page-title-snake">
+                            <div className="title-text"> <p>Snake</p></div>
+                            <div className="game-over-snake"><p>{(this.state.amIDied) ? "Gama Over" : ""}</p></div>
+                            <div className= "snake-score row mr-auto">
+                                <p>Score: {this.state.score}</p>
+                                <div className="col-1">
+                                    <div className="btn-group" role="group" aria-label="Second group">
+                                        <button  onClick={ () => this.reset() } className="btn btn-danger mr-2">Reset</button>
+                                        <button  onClick={ () => this.pause() } className="btn btn-warning">pause</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div className="body-board">
-                    <Board
-                        name = { (i) => "box-snake " + this.getName(i) }
-                        boardSize = { this.state.boardSize }
-                        getValue = { (i) => this.getBoxValue(i) }
-                        onClick = { (i) => null }
-                        style = { (i) => null}
-                    />
-                </div>
-            </div>
+            </main>
         );
     }
 }
