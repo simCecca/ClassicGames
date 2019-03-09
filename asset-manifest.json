@@ -1,16 +1,16 @@
 {
-  "main.css": "/ClassicGames/static/css/main.84bffb1f.chunk.css",
-  "main.js": "/ClassicGames/static/js/main.03cf260b.chunk.js",
-  "main.js.map": "/ClassicGames/static/js/main.03cf260b.chunk.js.map",
+  "main.css": "/ClassicGames/static/css/main.5dc4092b.chunk.css",
+  "main.js": "/ClassicGames/static/js/main.f0554dd5.chunk.js",
+  "main.js.map": "/ClassicGames/static/js/main.f0554dd5.chunk.js.map",
   "runtime~main.js": "/ClassicGames/static/js/runtime~main.0545c6ca.js",
   "runtime~main.js.map": "/ClassicGames/static/js/runtime~main.0545c6ca.js.map",
   "static/css/2.8ab53b01.chunk.css": "/ClassicGames/static/css/2.8ab53b01.chunk.css",
   "static/js/2.b9001827.chunk.js": "/ClassicGames/static/js/2.b9001827.chunk.js",
   "static/js/2.b9001827.chunk.js.map": "/ClassicGames/static/js/2.b9001827.chunk.js.map",
   "index.html": "/ClassicGames/index.html",
-  "precache-manifest.e498709d038c7cfb0ed26e849a9c6e1f.js": "/ClassicGames/precache-manifest.e498709d038c7cfb0ed26e849a9c6e1f.js",
+  "precache-manifest.1606059965547bec0bf7d7e23ad34037.js": "/ClassicGames/precache-manifest.1606059965547bec0bf7d7e23ad34037.js",
   "service-worker.js": "/ClassicGames/service-worker.js",
   "static/css/2.8ab53b01.chunk.css.map": "/ClassicGames/static/css/2.8ab53b01.chunk.css.map",
-  "static/css/main.84bffb1f.chunk.css.map": "/ClassicGames/static/css/main.84bffb1f.chunk.css.map",
+  "static/css/main.5dc4092b.chunk.css.map": "/ClassicGames/static/css/main.5dc4092b.chunk.css.map",
   "static/media/logo.svg": "/ClassicGames/static/media/logo.5d5d9eef.svg"
 }
